@@ -1,4 +1,4 @@
-import HeaderNav from "../molecules/Header_nav"
+import HeaderNav from "../molecules/Header_nav.jsx"
 
 const About = () => {
   

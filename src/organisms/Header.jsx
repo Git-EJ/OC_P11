@@ -1,9 +1,13 @@
-import HeaderNav from "../molecules/Header_nav"
+import HeaderNav from "../molecules/Header_nav.jsx";
+import HeaderBanner from "../molecules/Header_banner.jsx";
 
 const Header = () => {
   return (
-    <HeaderNav />
+    <header className="header">
+      <HeaderNav />
+      <HeaderBanner />
+    </header>
   )
 }
 
-export default Header
+export default Header;

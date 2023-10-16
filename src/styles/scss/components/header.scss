@@ -1,0 +1,44 @@
+
+
+.header {
+  @include flex_center_row;
+  justify-content: space-between;
+  width: 100%;
+
+  &_logo {
+    @include flex_center_row;
+
+    &_container {
+      width: 210px;
+      height:auto;
+    }
+
+    &_img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &_nav {
+
+    &_container {
+      @include flex_center_row;
+      width: fit-content;
+      margin-left: 2em;
+      
+      > :nth-child(1) {
+        margin-right: 2em;
+      }
+
+      > :nth-last-child(1) {
+
+      }
+    }
+
+    &_link {
+      @include navLink;
+      font-size: clamp(0.8em, 2.5vw, 1.5em);  
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import banner_header from "../assets/img/header_banner.webp"
+import banner_header from "../assets/img/header_banner.jpg"
 
 const HeaderBanner = () => {
   return (

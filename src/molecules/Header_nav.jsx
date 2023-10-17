@@ -1,4 +1,4 @@
-import logo_header from '../assets/logo/logo_header_webp.webp'
+import logo_header from '../assets/logo/logo_header_svg.svg'
 import { NavLink } from 'react-router-dom'
 
 const HeaderNav = () => {

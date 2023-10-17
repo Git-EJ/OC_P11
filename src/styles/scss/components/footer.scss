@@ -1,0 +1,30 @@
+.footer {
+
+  &_container {
+    @include flex_center_column;
+    width: 100%;
+    background: $tertiary_color;
+  }
+
+  &_logo {
+    
+    &_container {
+      @include flex_center;
+      max-width:122px;
+      height: auto;
+      margin-top: 3em;
+    } 
+    
+    &_img{
+      width: clamp(50%, 10vw, 100%);
+      height: auto;
+    }
+  }
+
+  &_text {
+    font-size: clamp(0.8em, 2.5vw, 1.5em);  
+    color: $primary-textColor;
+    margin: 1.5em 0 1em 0;
+    text-align: center;
+  }
+}

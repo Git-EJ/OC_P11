@@ -1,8 +1,12 @@
+import Footer from "../organisms/Footer.jsx"
 import Header from "../organisms/Header.jsx"
 
 const Home = () => {
   return (
-    <Header />
+    <div>
+      <Header />
+      <Footer />
+    </div>
   )
 }
 

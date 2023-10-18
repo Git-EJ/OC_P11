@@ -12,8 +12,8 @@ const Router = () => {
         <Route path = "/error/:errorCode" element = {<Error/>} />
         <Route path = "*" element = {<Error/>} />
         <Route path = "/about" element = {<About/>} />
-        <Route path = "/accommodation/*" element = {<Accommodation/>} />
-        
+        <Route path = "/accommodation/:id" element = {<Accommodation/>} /> {/* :id pour useParams */}
+      
       </Routes>
     </BrowserRouter>
   )

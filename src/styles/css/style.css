@@ -188,28 +188,31 @@ body ::-webkit-scrollbar {
 .cards_container {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3.5em 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-gap: 3em 2%;
+  place-items: center;
 }
 
 .card_container {
   width: 340px;
   height: 340px;
   position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  align-self: center;
 }
 .card_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0% 50%;
   position: relative;
 }
 .card_title {
   position: absolute;
-  bottom: 5%;
+  top: 83%;
   left: 5%;
+  right: 5%;
   color: #ffffff;
   font-size: 1.2em;
   font-weight: 500;

@@ -1,23 +1,19 @@
+import { NavLink } from 'react-router-dom';
 import Api from '../api/Api';
-
 const Card = () => {
   const apiData = Api();
   const { data, isLoading, error } = apiData || {}
 
-  if (isLoading) {
-    return <div>Chargement en cours...</div>
-  }
-
-  if (error) {
-    return <div>Error : Error Fetching data</div>
-  }
+  if (isLoading) return <div>Chargement en cours...</div>
+  
+  if (error) return <div>Error : Error Fetching data</div>
 
   const elements = data ? data.map((el) => {
     return (
-      <div className="card_container" key={el.id}>
+      <NavLink to = {`/accommodation/${el.id}`} className="card_container" key={el.id}>
         <img src={el.cover} alt='toto' className="card_img" />
         <p className='card_title'>{el.title}</p>
-      </div> 
+      </NavLink> 
     )
   }) : null;
 

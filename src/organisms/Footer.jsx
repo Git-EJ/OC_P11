@@ -1,7 +1,7 @@
 import logo_footer from '../assets/logo/logo_footer_svg.svg'
 
 const Footer = () => (
-  <footer className="footer_container">
+  <footer className="footer">
     <div className="footer_logo_container">
       <img src={logo_footer} alt="logo" className="footer_logo_img" />
     </div>

@@ -1,10 +1,7 @@
 .footer {
-
-  &_container {
     @include flex_center_column;
     width: 100%;
     background: $tertiary_color;
-  }
 
   &_logo {
     

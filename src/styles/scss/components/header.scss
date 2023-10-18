@@ -49,7 +49,7 @@
       position: relative;
       width: 100%;
       height: clamp(111px, 20vw, 223px);
-      border-radius: 30px;
+      border-radius: $home-radius;
       overflow: hidden;
       margin-top: 3em;
     }

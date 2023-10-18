@@ -185,7 +185,44 @@ body ::-webkit-scrollbar {
   font-weight: 500;
 }
 
-.footer_container {
+.cards_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5em 2%;
+}
+
+.card_container {
+  width: 340px;
+  height: 340px;
+  position: relative;
+}
+.card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 50%;
+  position: relative;
+}
+.card_title {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.cards_wrapper {
+  margin: 3rem 0;
+  padding: 3rem;
+  background: #f6f6f6;
+  border-radius: 30px;
+}
+
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;

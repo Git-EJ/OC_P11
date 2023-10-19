@@ -1,0 +1,41 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.loading_spinner {
+
+  &_container {
+    @include flex_center_column;
+    width:100%;
+    height: auto;
+    position: relative;
+  }
+  
+  &_circle {
+    width: 130px;
+    height: 130px;
+    border: 8px solid rgba(255, 96, 96, 0.06);
+    border-top: 6px solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1.2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    
+  }
+
+  &_icon {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+  }
+
+  &_text {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: $primary-color;
+    margin-top: 1em;
+  }
+}

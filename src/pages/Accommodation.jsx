@@ -1,18 +1,18 @@
-import { useParams } from "react-router-dom";
-import Api from "../api/Api";
-import Error from "./Error";
+
+import HeaderNav from "../molecules/Header_nav";
+import AcommodationDisplay from "../organisms/AccomodationDisplay";
+import Footer from "../organisms/Footer";
+
 
 const Accommodation = () => {
 
-  const { id } = useParams()
-  const apiData = Api()
-  const { data } = apiData || {}
-
-  // 404 si saisie user d'un path pour accéder à une page qui n'existe pas
-  const realId = data ? data.find(el => el.id === id) : null
-  if (!realId) return < Error errorCode = {404} />
-
-  return (<h1>Accommodation</h1>)
+  return (
+    <div className="accommodation">
+      <HeaderNav />
+      <AcommodationDisplay />
+      <Footer />
+    </div>
+  )
 }
 
 export default Accommodation

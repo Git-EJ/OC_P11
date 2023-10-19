@@ -8,7 +8,7 @@ const useFetch = (url) => {
   useEffect(() => {
     try {
       setIsLoading(true)
-      // setTimeout(() => { //simule le temps de chargement
+      // setTimeout(() => { //simule le temps de chargement de l'api
         fetch(url)
         .then(async (res) => {
           if(!res.ok) {
@@ -19,7 +19,7 @@ const useFetch = (url) => {
           setData(response)
           setError(null)
         })
-      // },2000)
+      // },3000)
     } catch (err) {
       setIsLoading(false)
       setError(err)

@@ -1,11 +1,13 @@
 @import "./base/__reset.scss";
-@import "./base/__all.scss";
 @import "./utils/__fonts.scss";
 @import "./utils/__variables.scss";
 @import "./utils/__flex_mixins.scss";
 @import "./utils/__mixins.scss";
+@import "./base/__all.scss";
 @import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./utils/__loading_spinner.scss";
 @import "./components/card.scss";
 @import "./components/cards.scss";
-@import "./components/footer.scss";
+@import "./components/accommodation.scss";
 

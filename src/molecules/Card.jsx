@@ -1,26 +1,25 @@
 import { NavLink } from 'react-router-dom';
 import Api from '../api/Api';
+import DataLoadingError from '../api/DataLoadingError';
+
+
 const Card = () => {
   const apiData = Api();
-  const { data, isLoading, error } = apiData || {}
+  const { data, isLoading, error } = apiData
 
-  if (isLoading) return <div>Chargement en cours...</div>
   
-  if (error) return <div>Error : Error Fetching data</div>
+  if (isLoading || error || !data) {
+    return <DataLoadingError data = {data} isLoading = {isLoading}  error = {error} />
+  }
 
-  const elements = data ? data.map((el) => {
+  const elements = data.map((el) => {
     return (
       <NavLink to = {`/accommodation/${el.id}`} className="card_container" key={el.id}>
         <img src={el.cover} alt='toto' className="card_img" />
         <p className='card_title'>{el.title}</p>
       </NavLink> 
     )
-  }) : null;
-
-  if (!data) {
-    console.log('No Data');  //TODO: why is call when data is fetched ?
-    return <div>No Data</div>;
-  }
+  })
 
   return (
     <div className="cards_container">

@@ -18,6 +18,24 @@
   }
 }
 
+@mixin banner_img_chevron {
+  svg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  path {
+    fill: $primary-textColor;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
 
 @mixin pages_display_timeout { //time before cards appears after loading spinner
   animation: pages_display_timeout 3s backwards;

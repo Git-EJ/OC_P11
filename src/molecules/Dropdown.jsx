@@ -17,11 +17,12 @@ const Dropdown = ({title, content, id}) => {
           { isOpen ? <ChevronUp /> : <ChevronDown /> }
         </div>
       </div>
-
+      
+      {/* TODO : suppression des accents premier elettre pour le content */}
       {!isOpen ? null :
         <div className="dropdown_contents_container">
           <div className='dropdown_contents_text'>
-            {typeof content === 'string' ? content : content.map((el, i) => (<p key={i + id}>{el}</p>))}
+            {typeof content === 'string' ? content : content.sort().map((el, i) => (<p key={i + id}>{el}</p>))}
           </div>
         </div>
       }

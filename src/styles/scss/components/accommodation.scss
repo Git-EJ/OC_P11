@@ -1,8 +1,13 @@
+.main_wrapper {
+  margin-top: 2rem;
+}
+
 .accommodation {
 
   &_banner {
 
     &_container {
+      position: relative;
       width: 100%;
       height: clamp(150px, 30vw, 415px);
       border-radius: $accomodation-radius;
@@ -14,6 +19,20 @@
       height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
+    }
+
+    &_chevron_right {
+      @include banner_img_chevron;
+      position: absolute;
+      top: calc(50% - 40px);
+      right: 2%;
+    }
+
+    &_chevron_left {
+      @include banner_img_chevron;
+      position: absolute;
+      top: calc(50% - 40px);
+      left: 2%;
     }
   }
 
@@ -27,7 +46,7 @@
       align-items: center;
       color: $primary-color;
       font-weight: 500;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     &_container {
@@ -105,6 +124,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 2em 0 3em 0;
   }
 }
 
@@ -162,7 +182,6 @@
   &_wrapper {
     @include flex_center_column;
     width: 45%;
-    margin: 1rem 0;
   }
 
   &_container {
@@ -194,6 +213,10 @@
 
     path {
       fill: $primary-textColor;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 

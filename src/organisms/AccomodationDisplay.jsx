@@ -27,7 +27,7 @@ const AccommodationDisplay = () => {
   return (
     <>
       <main className="main_wrapper">
-        <AccommodationBanner pictures={accommodationElement.pictures[2]} title={accommodationElement.title} id={id} />
+        <AccommodationBanner pictures={accommodationElement.pictures} title={accommodationElement.title} id={id} />
         <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host} id={id} />
         <div className="accommodation_tags_and_raiting_container">
           <Tags tags={accommodationElement.tags} id={id} />

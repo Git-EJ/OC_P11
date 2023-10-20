@@ -61,8 +61,8 @@
     &_name_container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
     }
 
     &_name {

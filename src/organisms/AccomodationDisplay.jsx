@@ -6,6 +6,7 @@ import Tags from "../molecules/Tags";
 import AccommodationBanner from "../molecules/AccommodationBanner";
 import AccommodationTitleHost from "../molecules/AccommodationTitleAndHost";
 import Rating from "../molecules/Rating";
+import Dropdown from "../molecules/Dropdown";
 
 
 const AccommodationDisplay = () => {
@@ -31,6 +32,10 @@ const AccommodationDisplay = () => {
         <div className="accommodation_tags_and_raiting_container">
           <Tags tags={accommodationElement.tags} id={id} />
           <Rating rating={accommodationElement.rating} id={id} />
+        </div>
+        <div className="accommodation_dropdowns_container">
+          <Dropdown title="Description" content={accommodationElement.description} id={id} />
+          <Dropdown title="Équipements" content={accommodationElement.equipments} id={id} />
         </div>
       </main>
     </>

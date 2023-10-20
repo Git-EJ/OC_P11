@@ -14,7 +14,7 @@ const AccommodationTitleHost = ({ title, location, host, id }) => {
           <div className="accommodation_host_name">{lastName}</div>
         </div>
         <div className="accommodation_host_img_container">
-          <img src={host.picture} alt={host.name}className="accommodation_host_img"/>
+          <img src={host.picture} alt={host.name} className="accommodation_host_img"/>
         </div>
       </div>
     </div>

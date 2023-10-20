@@ -4,11 +4,11 @@ import Header from "../organisms/Header.jsx"
 
 const Home = () => {
   return (
-    <div className="home">
+    <>
       <Header />
       <Cards />
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -5,8 +5,8 @@ const AccommodationTitleHost = ({ title, location, host, id }) => {
   return (
     <div key={id} className="accommodation_title_and_host_container">
       <div className="accommodation_title_container"> 
-        <div className="accommodation_title_text">{title}</div>
-        <div className="accommodation_title_location">{location}</div>
+        <h1 className="accommodation_title_text">{title}</h1>
+        <h2 className="accommodation_title_location">{location}</h2>
       </div>
       <div className="accommodation_host_container"> 
         <div className="accommodation_host_name_container">

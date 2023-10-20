@@ -8,7 +8,7 @@ const useFetch = (url) => {
   useEffect(() => {
     try {
       setIsLoading(true)
-      // setTimeout(() => { //simule le temps de chargement de l'api
+      // setTimeout(() => { //TODO: remove
         fetch(url)
         .then(async (res) => {
           if(!res.ok) {

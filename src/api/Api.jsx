@@ -1,10 +1,11 @@
 import useFetch from "./UseFetch";
 
-const Api = () => {
-  const fetchData = useFetch('/data/data.json')
+const Api = (apiUrl) => {
+  const fetchData = useFetch (apiUrl)
   const {data, isLoading, error} = fetchData
 
   return {data, isLoading, error}
 }
+
 
 export default Api;

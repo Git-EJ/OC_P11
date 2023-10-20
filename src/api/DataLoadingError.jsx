@@ -7,7 +7,7 @@ const DataLoadingError = ({data, isLoading, error}) => {
     return (
       <div className='loading_spinner_container'>
         <div className='loading_spinner_circle'></div>
-          <img src= {loadingSpinnerIcon} alt="loading" className="loading_spinner_icon" />
+        <img src= {loadingSpinnerIcon} alt="loading" className="loading_spinner_icon" />
         <p className='loading_spinner_text'>Chargement en cours...</p>
       </div>
     )

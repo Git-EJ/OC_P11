@@ -7,11 +7,11 @@ import Footer from "../organisms/Footer";
 const Accommodation = () => {
 
   return (
-    <div className="accommodation">
+    <>
       <HeaderNav />
       <AccommodationDisplay />
       <Footer />
-    </div>
+    </>
   )
 }
 

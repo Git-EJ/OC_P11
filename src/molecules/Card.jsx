@@ -4,7 +4,7 @@ import DataLoadingError from '../api/DataLoadingError';
 
 
 const Card = () => {
-  const apiData = Api();
+  const apiData = Api('/data/data_accommodations.json'); //TODO: call with props?
   const { data, isLoading, error } = apiData
 
   
@@ -16,7 +16,7 @@ const Card = () => {
     return (
       <NavLink to = {`/accommodation/${el.id}`} className="card_container" key={el.id}>
         <img src={el.cover} alt='toto' className="card_img" />
-        <p className='card_title'>{el.title}</p>
+        <h1 className='card_title'>{el.title}</h1>
       </NavLink> 
     )
   })

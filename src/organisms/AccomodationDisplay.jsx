@@ -12,7 +12,7 @@ import Dropdown from "../molecules/Dropdown";
 const AccommodationDisplay = () => {
 
   const { id } = useParams()
-  const apiData = Api()
+  const apiData = Api('/data/data_accommodations.json')
   const { data, isLoading, error } = apiData
 
   if (!data || !data.find(el => el.id === id)) return < Error errorCode = '404 - Accomodation not Found' />;

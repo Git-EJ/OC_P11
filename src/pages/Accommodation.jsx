@@ -1,6 +1,6 @@
 
-import HeaderNav from "../molecules/Header_nav";
-import AcommodationDisplay from "../organisms/AccomodationDisplay";
+import HeaderNav from "../molecules/HeaderNav";
+import AccommodationDisplay from "../organisms/AccomodationDisplay";
 import Footer from "../organisms/Footer";
 
 
@@ -9,7 +9,7 @@ const Accommodation = () => {
   return (
     <div className="accommodation">
       <HeaderNav />
-      <AcommodationDisplay />
+      <AccommodationDisplay />
       <Footer />
     </div>
   )

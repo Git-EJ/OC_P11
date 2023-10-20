@@ -1,4 +1,4 @@
-import loadingSpinnerIcon from '../assets/img/loading_spinner_icon_svg.svg';
+import loadingSpinnerIcon from '../assets/icons/loading_spinner_icon_svg.svg';
 import PropTypes from 'prop-types';
 
 const DataLoadingError = ({data, isLoading, error}) => {

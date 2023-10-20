@@ -2,9 +2,13 @@ import DataLoadingError from "../api/DataLoadingError";
 import { useParams } from "react-router-dom";
 import Api from "../api/Api";
 import Error from "../pages/Error";
+import Tags from "../molecules/Tags";
+import AccommodationBanner from "../molecules/AccommodationBanner";
+import AccommodationTitleHost from "../molecules/AccommodationTitleAndHost";
+import Rating from "../molecules/Rating";
 
 
-const AcommodationDisplay = () => {
+const AccommodationDisplay = () => {
 
   const { id } = useParams()
   const apiData = Api()
@@ -17,35 +21,20 @@ const AcommodationDisplay = () => {
     return <DataLoadingError data = {data} isLoading = {isLoading}  error = {error} />
   }
 
-
   const accommodationElement = data.find(el => el.id === id);
  
-  
-  const [firstName, lastName] = accommodationElement.host.name.split(" ")
-  console.log(firstName, lastName)
   return (
     <>
-      <div className="accommodation_banner_container">
-        <img src={accommodationElement.pictures[2]} alt= {accommodationElement.title} className="accommodation_banner_img" />
-      </div>
-
-      <div className="accommodation_title_and_host_container">
-        <div className="accommodation_title_container"> 
-          <div className="accommodation_title_text">{accommodationElement.title}</div>
-          <div className="accommodation_title_location">{accommodationElement.location}</div>
+      <main className="main_wrapper">
+        <AccommodationBanner pictures={accommodationElement.pictures[2]} title={accommodationElement.title} id={id} />
+        <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host} id={id} />
+        <div className="accommodation_tags_and_raiting_container">
+          <Tags tags={accommodationElement.tags} id={id} />
+          <Rating rating={accommodationElement.rating} id={id} />
         </div>
-        <div className="accommodation_host_container"> 
-          <div className="accommodation_host_name_container">
-            <div className="accommodation_host_name">{firstName}</div>
-            <div className="accommodation_host_name">{lastName}</div>
-          </div>
-          <div className="accommodation_host_img_container">
-            <img src={accommodationElement.host.picture} alt={accommodationElement.host.name}className="acommodation_host_img"/>
-          </div>
-        </div>
-      </div>
+      </main>
     </>
   )
 }
 
-export default AcommodationDisplay;
+export default AccommodationDisplay;

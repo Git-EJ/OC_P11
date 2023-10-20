@@ -36,7 +36,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      padding-right: 2rem;
+      margin-right: 2rem;
     }
 
     &_text {
@@ -44,7 +44,6 @@
     }
 
     &_location {
-      display: flex;
       margin-top: 0.3rem;
     }
   }
@@ -89,6 +88,61 @@
       height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
+    }
+  }
+
+  &_tags_and_raiting_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+
+.tags {
+
+  &_container {
+    @include flex_center_row;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  &_tag {
+
+    &_container {
+      background: $primary-color;
+      margin-right:1em;
+      border-radius: 8px;
+      padding: 0.3em 1em;
+    }
+
+    &_text {
+      font-size: 0.8rem;
+      color: $primary-textColor;
+    }
+    
+  }
+}
+
+
+.rating {
+
+  &_container {
+    @include flex_center_row;
+    justify-content: flex-end;
+    width: fit-content;
+  }
+
+  &_star {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+    
+    &:not(:last-child) {
+      margin-right: 0.5em;
     }
   }
 }

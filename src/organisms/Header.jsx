@@ -1,5 +1,5 @@
-import HeaderNav from "../molecules/Header_nav.jsx";
-import HeaderBanner from "../molecules/Header_banner.jsx";
+import HeaderNav from "../molecules/HeaderNav.jsx";
+import HeaderBanner from "../molecules/HeaderBanner.jsx";
 
 const Header = () => {
   return (

@@ -1,17 +1,26 @@
 import PropTypes from 'prop-types'
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
+import Header from '../molecules/HeaderNav';
+import Footer from '../organisms/Footer';
 
 const Error = ({errorCode}) => {
   const param = useParams().errorCode
   errorCode = errorCode || param
   console.log(errorCode);
   if (!errorCode) errorCode = 404
-  const message = 'Page Not Found'
+  const errorMessage = 'Oups! La page que vous demandez n\'existe pas.'
+  const homeMessage = 'Retourner sur la page d\'accueil'
+  
   return (
-    <div>
-      <h1>{ `Error ${errorCode}` }</h1>
-      <p>{ message }</p>
-    </div>
+    <>
+      <Header />
+      <main className="main_wrapper">
+        <h1>{errorCode}</h1>
+        <p>{ errorMessage }</p>
+        <NavLink to='/'>{homeMessage}</NavLink>
+      </main>
+      <Footer />
+    </>
   )
 }
 

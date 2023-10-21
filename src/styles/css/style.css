@@ -97,8 +97,9 @@ body ::-webkit-scrollbar {
   display: none;
 }
 
-#root {
-  margin: 3em 6em;
+header,
+main {
+  margin: 3em 6em !important;
 }
 
 .hidden {
@@ -110,7 +111,7 @@ body ::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
 }
 
 .header_logo {
@@ -153,7 +154,8 @@ body ::-webkit-scrollbar {
 .header_nav_link.active:hover {
   color: #e61313;
 }
-.header_banner_container {
+
+.home_banner_container {
   position: relative;
   width: 100%;
   height: clamp(111px, 20vw, 223px);
@@ -161,7 +163,7 @@ body ::-webkit-scrollbar {
   overflow: hidden;
   margin-top: 3em;
 }
-.header_banner_img {
+.home_banner_img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,7 +171,7 @@ body ::-webkit-scrollbar {
   height: 100%;
   object-fit: cover;
 }
-.header_banner_text {
+.home_banner_text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,13 +187,52 @@ body ::-webkit-scrollbar {
   font-weight: 500;
 }
 
+.cards_wrapper {
+  margin: 3rem 0;
+  padding: 3rem;
+  background: #f6f6f6;
+  border-radius: 30px;
+}
+.cards_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 3em 2%;
+  place-items: center;
+}
+
+.card_container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.card_title {
+  position: absolute;
+  top: 83%;
+  left: 5%;
+  right: 5%;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  max-width: 1440px;
   background: #000000;
+  text-align: center;
 }
 .footer_logo_container {
   display: flex;
@@ -323,49 +364,9 @@ body ::-webkit-scrollbar {
   color: #ff6060;
 }
 
-.cards_container {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 3em 2%;
-  place-items: center;
-}
-
-.card_container {
-  width: 100%;
-  aspect-ratio: 1/1;
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.card_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-}
-.card_title {
-  position: absolute;
-  top: 83%;
-  left: 5%;
-  right: 5%;
-  color: #ffffff;
-  font-size: 1.2em;
-  font-weight: 500;
-}
-
-.cards_wrapper {
-  margin: 3rem 0;
-  padding: 3rem;
-  background: #f6f6f6;
-  border-radius: 30px;
-}
-
-.main_wrapper {
+.accommodation_wrapper {
   margin-top: 2rem;
 }
-
 .accommodation_banner_container {
   position: relative;
   width: 100%;

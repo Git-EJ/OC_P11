@@ -1,10 +1,20 @@
-.cards_container {
-  width: 100%;
-  height:auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 3em 2%;
-  place-items: center;
+.cards {
+
+  &_wrapper {
+    margin: 3rem 0;
+    padding: 3rem;
+    background: $primary-bgColor;
+    border-radius: $home-radius;
+  }
+
+  &_container {
+    width: 100%;
+    height:auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3em 2%;
+    place-items: center;
+  }
 }
 
 .card {

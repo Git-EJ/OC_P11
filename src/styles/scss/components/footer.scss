@@ -1,7 +1,8 @@
 .footer {
     @include flex_center_column;
-    width: 100%;
+    max-width: 1440px;
     background: $tertiary_color;
+    text-align: center;
 
   &_logo {
     

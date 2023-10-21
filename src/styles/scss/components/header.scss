@@ -1,7 +1,7 @@
 .header_logo_nav {
   @include flex_center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
 }
 
 .header {
@@ -40,39 +40,6 @@
     &_link {
       @include navLink;
       font-size: clamp(0.8em, 2.5vw, 1.5em);  
-    }
-  }
-
-  &_banner {
-    
-    &_container{
-      position: relative;
-      width: 100%;
-      height: clamp(111px, 20vw, 223px);
-      border-radius: $home-radius;
-      overflow: hidden;
-      margin-top: 3em;
-    }
-    
-    &_img {
-      @include flex_center;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &_text {
-      @include flex_center;
-      position: absolute;
-      width:100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      color: $primary-textColor;
-      font-size: clamp(1em, 4vw, 3em);
-      font-weight: 500;
     }
   }
 }

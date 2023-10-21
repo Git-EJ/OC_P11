@@ -15,7 +15,7 @@ const AccommodationDisplay = () => {
   const apiData = Api('/data/data_accommodations.json')
   const { data, isLoading, error } = apiData
 
-  if (!data || !data.find(el => el.id === id)) return < Error errorCode = '404 - Accomodation not Found' />;
+  if (!data || !data.find(el => el.id === id)) return < Error errorCode = '404' />;
 
 
   if (isLoading || error || !data) {
@@ -26,7 +26,7 @@ const AccommodationDisplay = () => {
  
   return (
     <>
-      <main className="main_wrapper">
+      <main className="accommodation_wrapper">
         <AccommodationBanner pictures={accommodationElement.pictures} title={accommodationElement.title} id={id} />
         <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host} id={id} />
         <div className="accommodation_tags_and_raiting_container">

@@ -1,8 +1,14 @@
 .footer {
-    @include flex_center_column;
+  @include flex_center;
     max-width: 1440px;
     background: $tertiary_color;
-    text-align: center;
+
+  &_wrapper {
+    @include flex_center_column;
+    width: fit-content;
+    height: auto;
+    padding: 2em 0;
+  }
 
   &_logo {
     
@@ -10,7 +16,6 @@
       @include flex_center;
       max-width:122px;
       height: auto;
-      margin-top: 3em;
     } 
     
     &_img{
@@ -22,7 +27,6 @@
   &_text {
     font-size: clamp(0.8em, 2.5vw, 1.5em);  
     color: $primary-textColor;
-    margin: 1.5em 0 1em 0;
-    text-align: center;
+    margin-top: 2rem;
   }
 }

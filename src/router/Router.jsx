@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route,} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import Error from "../pages/Error"
 import About from "../pages/About"
@@ -11,9 +11,9 @@ const Router = () => {
         <Route path = "/" element = {<Home/>} />
         <Route path = "/error/:errorCode" element = {<Error/>} />
         <Route path = "/about" element = {<About/>} />
-        <Route path = "/accommodation/:id" element = {<Accommodation/>} /> {/* :id pour useParams */}
+        <Route path = "/accommodation/:id" element = {<Accommodation/>} />
         <Route path = "*" element = {<Error/>} />
-      
+        {/* <Route path = "/accommodation/:id"  element = {<Accommodation/>} errorElement = {<Error/>} /> */}
       </Routes>
     </BrowserRouter>
   )

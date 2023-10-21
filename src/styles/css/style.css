@@ -229,10 +229,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   max-width: 1440px;
   background: #000000;
-  text-align: center;
+}
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  height: auto;
+  padding: 2em 0;
 }
 .footer_logo_container {
   display: flex;
@@ -240,7 +247,6 @@ main {
   align-items: center;
   max-width: 122px;
   height: auto;
-  margin-top: 3em;
 }
 .footer_logo_img {
   width: clamp(50%, 10vw, 100%);
@@ -249,8 +255,7 @@ main {
 .footer_text {
   font-size: clamp(0.8em, 2.5vw, 1.5em);
   color: #ffffff;
-  margin: 1.5em 0 1em 0;
-  text-align: center;
+  margin-top: 2rem;
 }
 
 @keyframes spin {
@@ -269,6 +274,7 @@ main {
   width: 100%;
   height: auto;
   position: relative;
+  margin: 1rem 0;
 }
 .loading_spinner_circle {
   width: 130px;

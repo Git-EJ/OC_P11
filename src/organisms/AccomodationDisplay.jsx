@@ -1,7 +1,6 @@
 import DataLoadingError from "../api/DataLoadingError";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Api from "../api/Api";
-import Error from "../pages/Error";
 import Tags from "../molecules/Tags";
 import AccommodationBanner from "../molecules/AccommodationBanner";
 import AccommodationTitleHost from "../molecules/AccommodationTitleAndHost";
@@ -15,13 +14,14 @@ const AccommodationDisplay = () => {
   const apiData = Api('/data/data_accommodations.json')
   const { data, isLoading, error } = apiData
 
-  if (!data || !data.find(el => el.id === id)) return < Error errorCode = '404' />;
-
-
+  
   if (isLoading || error || !data) {
-    return <DataLoadingError data = {data} isLoading = {isLoading}  error = {error} />
+    return <DataLoadingError data={data} isLoading={isLoading} error={error} />;
   }
-
+  
+  if (!data || !data.find((el) => el.id === id)) return <Navigate to="/error/404"/>;
+  
+ 
   const accommodationElement = data.find(el => el.id === id);
  
   return (

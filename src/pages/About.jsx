@@ -1,4 +1,4 @@
-import HeaderNav from "../molecules/HeaderNav.jsx"
+import Header from "../organisms/Header.jsx"
 import AboutDisplay from "../organisms/AboutDisplay.jsx"
 import Footer from "../organisms/Footer.jsx"
 
@@ -6,11 +6,11 @@ const About = () => {
   
   return (
    <>
-    <HeaderNav />
+    <Header />
     <AboutDisplay />
     <Footer />
    </> 
   )
 }
 
-export default About
+export default About;

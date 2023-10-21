@@ -8,7 +8,7 @@ const useFetch = (url) => {
   useEffect(() => {
     try {
       setIsLoading(true)
-      // setTimeout(() => { //TODO: remove
+      setTimeout(() => { //TODO: remove
         fetch(url)
         .then(async (res) => {
           if(!res.ok) {
@@ -19,7 +19,7 @@ const useFetch = (url) => {
           setData(response)
           setError(null)
         })
-      // },3000)
+      },500)
     } catch (err) {
       setIsLoading(false)
       setError(err)

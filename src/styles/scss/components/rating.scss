@@ -1,0 +1,19 @@
+.rating {
+
+  &_container {
+    @include flex_center_row;
+    justify-content: flex-end;
+    width: fit-content;
+  }
+
+  &_star {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+    
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+}

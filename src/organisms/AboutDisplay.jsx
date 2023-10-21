@@ -8,12 +8,12 @@ const AboutDisplay = () => {
   const fetchData = Api('/data/data_about.json')
   const {data, isLoading, error} = fetchData
 
-  if (!data) return < Error errorCode = '404' />;
-
+  
   if (isLoading || error || !data) {
     return <DataLoadingError data = {data} isLoading = {isLoading}  error = {error} />
   }
   
+  if (!data) return < Error errorCode = '404' />;
 
   return (
   <main className="about_wrapper">

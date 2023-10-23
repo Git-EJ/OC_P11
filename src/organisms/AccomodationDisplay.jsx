@@ -2,7 +2,7 @@ import DataLoadingError from "../api/DataLoadingError";
 import { Navigate, useParams } from "react-router-dom";
 import Api from "../api/Api";
 import Tags from "../molecules/Tags";
-import AccommodationBanner from "../molecules/AccommodationBanner";
+import Lightbox from "../molecules/Lightbox";
 import AccommodationTitleHost from "../molecules/AccommodationTitleAndHost";
 import Rating from "../molecules/Rating";
 import Dropdown from "../molecules/Dropdown";
@@ -11,7 +11,7 @@ import Dropdown from "../molecules/Dropdown";
 const AccommodationDisplay = () => {
 
   const { id } = useParams()
-  const apiData = Api('/data/data_accommodations.json')
+  const apiData = Api.Accomodations()
   const { data, isLoading, error } = apiData
 
   
@@ -24,20 +24,28 @@ const AccommodationDisplay = () => {
  
   const accommodationElement = data.find(el => el.id === id);
  
+  const sortEquipements = (a, b) => {
+    return a.localeCompare(b)
+    //return a//.localeCompare(b) pour pas de sort()
+  }
+
+
   return (
     <>
       <main className="accommodation_wrapper">
-        <AccommodationBanner pictures={accommodationElement.pictures} title={accommodationElement.title} id={id} />
+        <Lightbox pictures={accommodationElement.pictures} title={accommodationElement.title} />
         <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host} id={id} />
         <div className="accommodation_tags_and_raiting_container">
-          <Tags tags={accommodationElement.tags} id={id} />
-          <Rating rating={accommodationElement.rating} id={id} />
+          <Tags tags={accommodationElement.tags} />
+          <Rating rating={accommodationElement.rating} />
         </div>
         <div className="accommodation_dropdowns_container">
-          <Dropdown title="Description" content={accommodationElement.description} id={id} />
-          <Dropdown title="Équipements" content={accommodationElement.equipments} id={id} />
+          <Dropdown title="Description">{accommodationElement.description}</Dropdown>
+          <Dropdown title="Équipements"> 
+            {accommodationElement.equipments.sort(sortEquipements).map((el, i) => <p key={`equ-${i}`}>{el}</p>)}
+          </Dropdown>
         </div>
-      </main>
+      </main> 
     </>
   )
 }

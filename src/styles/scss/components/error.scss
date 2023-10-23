@@ -1,0 +1,23 @@
+.error {
+  &_wrapper {
+    @include flex_center_column;
+    color: $primary-color;
+  }
+
+  &_code {
+    font-size: clamp(5rem, 18vw, 18rem);
+    font-weight: 700;
+  }
+
+  &_message {
+    font-size: clamp(0.8rem, 2vw, 2rem);    
+    font-weight: 500;
+    margin-top:5rem;
+  }
+
+  &_navlink {
+    font-size: clamp(0.6rem, 1.2vw, 1.2rem);
+    color: $primary-color;
+    margin-top: 8rem;;
+  }
+}

@@ -13,17 +13,13 @@ const Error = ({errorCode}) => {
   
   return (
     <>
-    <div className='HEADER-ERROR'> {/*TODO . REMOVE*/}
       <Header />
-    </div>
     <main className="error_wrapper">
-      <h1>{errorCode}</h1>
-      <p>{ errorMessage }</p>
-      <NavLink to='/'>{homeMessage}</NavLink>
+      <div className='error_code'>{errorCode}</div>
+      <div className='error_message'>{ errorMessage }</div>
+      <NavLink to='/' className="error_navlink">{homeMessage} </NavLink>
     </main>
-    <div className='FOOTER-ERROR'> {/*TODO . REMOVE*/}
       <Footer />
-    </div>
     </> 
   )
 }

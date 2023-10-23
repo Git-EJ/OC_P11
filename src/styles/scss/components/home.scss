@@ -3,9 +3,11 @@
   &_banner {
     
     &_container{
+      @include flex_center;
       position: relative;
       width: 100%;
-      height: clamp(111px, 20vw, 223px);
+      // height: clamp(111px, 20vw, 223px);
+      max-height: 223px;
       border-radius: $home-radius;
       overflow: hidden;
       margin-top: 3em;
@@ -30,6 +32,12 @@
       color: $primary-textColor;
       font-size: clamp(1em, 4vw, 3em);
       font-weight: 500;
+
+      @media screen and (max-width: 600px) {
+        white-space: normal; /* Permet au texte de passer à la ligne */
+        text-align: left; 
+        padding: 1.2rem;
+      }
     }
   }
 }

@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 import Star from '../atoms/StarSolid';
 
+const starColor = ['#e3e3e3', '#ff6060']
 
-const Rating = ({ rating, id }) => {
-const starColorChecked = '#ff6060'
-const starColorUnchecked = '#e3e3e3'
+const Rating = ({ rating, max=5 }) => {
 
   //React transforme le tableau en élément DOM (chaque element du tableau est un composant REACT)
-  const stars = [];
-  for (let i = 0; i < 5; i++) {
-    const starColor = i < rating ? starColorChecked : starColorUnchecked
-    stars.push(<div key={id + i} className="rating_star"><Star color={starColor} /></div>)
-  } 
-
+  const stars = new Array(max).fill(0).map((_, i) => i);
+  
   return (
     <div className="rating_container">     
-        {stars}
+      {stars.map(s =>
+        <div key={`star-${s}`} className="rating_star">
+          <Star color={starColor[+rating > +s ? 1 : 0]} />
+        </div>
+      )}
     </div>
   )
 }
 
-Rating.propTypes = { rating: PropTypes.string, id: PropTypes.string }
+Rating.propTypes = {
+  rating: PropTypes.string,
+  max: PropTypes.number
+}
 
 export default Rating;

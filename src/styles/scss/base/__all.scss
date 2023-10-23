@@ -7,12 +7,16 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   ::-webkit-scrollbar {display: none}
+  
 }
 
 header,
 main {
   margin: 3em 6em !important;
   
+  @media screen and (max-width: 700px) {
+    margin: 3em 1em !important;
+  }
 }
 
 .hidden {

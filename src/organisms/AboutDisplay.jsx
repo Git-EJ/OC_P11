@@ -5,7 +5,7 @@ import Error from "../pages/Error";
 
 const AboutDisplay = () => {
 
-  const fetchData = Api('/data/data_about.json')
+  const fetchData = Api.About()
   const {data, isLoading, error} = fetchData
 
   
@@ -17,10 +17,18 @@ const AboutDisplay = () => {
 
   return (
   <main className="about_wrapper">
-    <Dropdown title="Fiabilité" content={data.fiabilite.content} id={data.fiabilite.id} className='dropdown_wrapper_about'/>
-    <Dropdown title="Respect" content={data.respect.content} id={data.respect.id}className='dropdown_wrapper_about'/>
-    <Dropdown title="Service" content={data.service.content} id={data.service.id}className='dropdown_wrapper_about'/>
-    <Dropdown title="Sécurité" content={data.securite.content} id={data.securite.id}className='dropdown_wrapper_about'/>
+    <Dropdown title="Fiabilité">
+      {data.fiabilite.content}
+    </Dropdown>
+    <Dropdown title="Respect">
+      {data.respect.content}
+    </Dropdown>
+    <Dropdown title="Service">
+      {data.service.content}
+    </Dropdown>
+    <Dropdown title="Sécurité">
+      {data.securite.content}
+    </Dropdown>
   </main>
   )
 }

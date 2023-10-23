@@ -4,7 +4,7 @@ import DataLoadingError from '../api/DataLoadingError';
 
 
 const Card = () => {
-  const apiData = Api('/data/data_accommodations.json'); //TODO: call with props?
+  const apiData = Api.Accomodations()
   const { data, isLoading, error } = apiData
 
   

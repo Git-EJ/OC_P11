@@ -1,31 +1,53 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ChevronUp from '../atoms/ChevronUp';
 import ChevronDown from '../atoms/ChevronDown';
 import PropTypes from 'prop-types';
 
-const Dropdown = ({title, content, id, className}) => {
+const Dropdown = ({title, children, className}) => {
+
+  const [animating, setAnimating] = useState(false)
+
 
   const [isOpen, setIsOpen] = useState(false)
-  const click = () => isOpen ? setIsOpen(false) : setIsOpen(true)
+  const click = () => setAnimating(true)
+
+  const classNames = ['dropdown_wrapper']
+  className && classNames.push(className) 
+
+  const [animClass, setAnimClass] = useState('')
+
+  useEffect(() => {
+    if (animating) {
+      if (!isOpen) {
+        setAnimClass(' dropdown_open')
+        setIsOpen(true)
+      } else {
+        setAnimClass('')
+        setTimeout(() => {
+          setIsOpen(false)
+        }, 500)
+      }
+    }
+    setAnimating(false)
+  }, [animating, setIsOpen, setAnimClass, isOpen])
 
   return (
-    <div className={className ? className : 'dropdown_wrapper'}>
-
-      <div className="dropdown_container">
+    <div className={classNames.join(' ')}>
+      {/* TODO : cursor pointer sur le container */}
+      <div className="dropdown_container" onClick={() => click()}>
         <h4 className="dropdown_title">{title}</h4>
-        <div className="dropdown_button" onClick={() => click()}>
+        <div className="dropdown_button">
           { isOpen ? <ChevronUp /> : <ChevronDown /> }
         </div>
       </div>
       
-      {/* TODO : suppression des accents premiere lettre pour le content équipement*/}
-      {!isOpen ? null :
-        <div className='dropdown_contents_container'>
+      {isOpen && (
+        <div className={'dropdown_contents_container' + animClass}>
           <div className='dropdown_contents_text'>
-            {typeof content === 'string' ? content : content.sort().map((el, i) => (<p key={i + id}>{el}</p>))}
+            {children}
           </div>
         </div>
-      }
+      )}
     </div>
   )
 }
@@ -33,12 +55,8 @@ const Dropdown = ({title, content, id, className}) => {
 //TODO : add isRequired if needed on each prop???
 Dropdown.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.array
-  ]),
-  id: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Dropdown;

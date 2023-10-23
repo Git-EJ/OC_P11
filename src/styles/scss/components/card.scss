@@ -5,6 +5,11 @@
     padding: 3rem;
     background: $primary-bgColor;
     border-radius: $home-radius;
+    @include flex_center;
+
+    @media screen and (max-width: 600px) {
+      padding: 1rem;
+    }
   }
 
   &_container {
@@ -14,6 +19,16 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 3em 2%;
     place-items: center;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+    @media screen and (max-width: 400px) {
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+    @media screen and (max-width: 350px) {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
   }
 }
 
@@ -41,7 +56,7 @@
     left: 5%;
     right:5%;
     color: $primary-textColor;
-    font-size: 1.2em;
+    font-size: clamp(1em, 1.2vw, 1.2em);
     font-weight: 500;
   }
 }

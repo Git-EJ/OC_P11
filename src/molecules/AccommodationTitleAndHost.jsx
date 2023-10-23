@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const AccommodationTitleHost = ({ title, location, host, id }) => {
+const AccommodationTitleHost = ({ title, location, host }) => {
   const [firstName, lastName] = host.name.split(" ")
   return (
-    <div key={id} className="accommodation_title_and_host_container">
+    <div className="accommodation_title_and_host_container">
       <div className="accommodation_title_container"> 
         <h1 className="accommodation_title_text">{title}</h1>
         <h2 className="accommodation_title_location">{location}</h2>
@@ -21,6 +21,6 @@ const AccommodationTitleHost = ({ title, location, host, id }) => {
   )
 }
 
-AccommodationTitleHost.propTypes = { title: PropTypes.string, location: PropTypes.string, host: PropTypes.object, id: PropTypes.string }
+AccommodationTitleHost.propTypes = { title: PropTypes.string, location: PropTypes.string, host: PropTypes.object }
 
 export default AccommodationTitleHost;

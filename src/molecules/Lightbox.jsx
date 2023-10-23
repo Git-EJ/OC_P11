@@ -11,8 +11,8 @@ const Lightbox = ({pictures, title}) => {
 
   if (pictures.length === 1) {
     return (
-      <div className="accommodation_banner_container">
-        <img src={pictures[0]} alt= {title} className="accommodation_banner_img" />
+      <div className="lightbox_container">
+        <img src={pictures[0]} alt= {title} className="lightbox_img" />
       </div>
     )
   } 
@@ -21,11 +21,11 @@ const Lightbox = ({pictures, title}) => {
   const clickRight = () => currentPicture === pictures.length - 1 ? setCurrentPicture(0) : setCurrentPicture(currentPicture + 1)
 
   return (
-    <div className="accommodation_banner_container">
-      <img src={pictures[currentPicture]} alt= {title} className="accommodation_banner_img" />
-      <div className="accommodation_banner_counter">{currentPicture + 1} / {pictures.length}</div>
-      <div className='accommodation_banner_chevron_left' onClick={() => clickLeft()}><ChevronLeft /></div>
-      <div className='accommodation_banner_chevron_right' onClick={() => clickRight()}><ChevronRight /> </div>
+    <div className="lightbox_container">
+      <img src={pictures[currentPicture]} alt= {title} className="lightbox_img" />
+      <div className="lightbox_counter">{currentPicture + 1} / {pictures.length}</div>
+      <div className='lightbox_chevron_left' onClick={() => clickLeft()}><ChevronLeft /></div>
+      <div className='lightbox_chevron_right' onClick={() => clickRight()}><ChevronRight /> </div>
     </div>
   )
 }

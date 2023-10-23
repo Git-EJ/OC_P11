@@ -34,10 +34,10 @@ const AccommodationDisplay = () => {
     <>
       <main className="accommodation_wrapper">
         <Lightbox pictures={accommodationElement.pictures} title={accommodationElement.title} />
-        <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host} id={id} />
+        <AccommodationTitleHost title={accommodationElement.title} location={accommodationElement.location} host={accommodationElement.host}/>
         <div className="accommodation_tags_and_raiting_container">
           <Tags tags={accommodationElement.tags} />
-          <Rating rating={accommodationElement.rating} />
+          <Rating rating={accommodationElement.rating} max={5} />
         </div>
         <div className="accommodation_dropdowns_container">
           <Dropdown title="Description">{accommodationElement.description}</Dropdown>

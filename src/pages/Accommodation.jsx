@@ -1,6 +1,6 @@
 
 import Header from "../organisms/Header";
-import AccommodationDisplay from "../organisms/AccomodationDisplay";
+import Accommodations from "../organisms/Accomodations";
 import Footer from "../organisms/Footer";
 
 
@@ -9,7 +9,7 @@ const Accommodation = () => {
   return (
     <>
       <Header />
-      <AccommodationDisplay />
+      <Accommodations />
       <Footer />
     </>
   )

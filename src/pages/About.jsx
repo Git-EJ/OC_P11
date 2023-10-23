@@ -1,5 +1,5 @@
 import Header from "../organisms/Header.jsx"
-import AboutDisplay from "../organisms/AboutDisplay.jsx"
+import Abouts from "../organisms/Abouts.jsx"
 import Footer from "../organisms/Footer.jsx"
 
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
   return (
    <>
     <Header />
-    <AboutDisplay />
+    <Abouts />
     <Footer />
    </> 
   )

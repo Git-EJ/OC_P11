@@ -24,6 +24,7 @@ const AccommodationTitleHost = ({ title, location, host }) => {
 AccommodationTitleHost.propTypes = { 
   title: PropTypes.string.isRequired, 
   location: PropTypes.string.isRequired, 
-  host: PropTypes.object.isRequired }
+  host: PropTypes.object.isRequired 
+}
 
 export default AccommodationTitleHost;

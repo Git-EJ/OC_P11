@@ -13,6 +13,7 @@ const Lightbox = ({pictures, title}) => {
     return (
       <div className="lightbox_container">
         <img src={pictures[0]} alt= {title} className="lightbox_img" />
+        <div className="lightbox_counter">{currentPicture + 1} / {pictures.length}</div>
       </div>
     )
   } 

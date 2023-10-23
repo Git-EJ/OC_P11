@@ -4,6 +4,11 @@
     @include flex_center_row;
     justify-content: flex-end;
     width: fit-content;
+
+    // TODO CHECK IF NEED IT
+    // @media  screen and (max-width: 700px) {
+    // margin-top: 1rem;
+    // }
   }
 
   &_star {

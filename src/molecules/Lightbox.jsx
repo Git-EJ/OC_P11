@@ -3,8 +3,6 @@ import ChevronRight from '../atoms/ChevronRight';
 import ChevronLeft from '../atoms/ChevronLeft';
 import { useState } from 'react';
 
-//TODO compteur de photos
-
 const Lightbox = ({pictures, title}) => {
 
   const [currentPicture, setCurrentPicture] = useState(0)
@@ -32,6 +30,9 @@ const Lightbox = ({pictures, title}) => {
   )
 }
 
-Lightbox.propTypes = { pictures: PropTypes.array, title: PropTypes.string }
+Lightbox.propTypes = { 
+  pictures: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+}
 
 export default Lightbox;

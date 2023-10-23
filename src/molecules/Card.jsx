@@ -9,7 +9,7 @@ const Card = () => {
 
   
   if (isLoading || error || !data) {
-    return <DataLoadingError data = {data} isLoading = {isLoading}  error = {error} />
+    return <DataLoadingError data={data} isLoading={isLoading}  error={error} />
   }
 
   const elements = data.map((el) => {

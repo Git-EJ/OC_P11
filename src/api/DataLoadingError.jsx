@@ -16,13 +16,16 @@ const DataLoadingError = ({data, isLoading, error}) => {
   if (error) return <div>Error : Error Fetching data</div>
 
   if (!data) {
-    console.log('No Data')
     return <div>No Data</div>
   }
 
   return <> </>
 }
 
-DataLoadingError.propTypes = { data: PropTypes.array, isLoading: PropTypes.bool, error: PropTypes.object }
+DataLoadingError.propTypes = { 
+  data: PropTypes.array, 
+  isLoading: PropTypes.bool,
+  error: PropTypes.object
+}
 
 export default DataLoadingError;

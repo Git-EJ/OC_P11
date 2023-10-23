@@ -51,11 +51,10 @@ const Dropdown = ({title, children, className}) => {
   )
 }
 
-//TODO : add isRequired if needed on each prop???
 Dropdown.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 }
 
 export default Dropdown;

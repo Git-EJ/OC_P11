@@ -20,8 +20,8 @@ const Rating = ({ rating, max=5 }) => {
 }
 
 Rating.propTypes = {
-  rating: PropTypes.string,
-  max: PropTypes.number
+  rating: PropTypes.string.isRequired,
+  max: PropTypes.number.isRequired,
 }
 
 export default Rating;

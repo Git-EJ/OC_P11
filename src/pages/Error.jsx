@@ -14,11 +14,11 @@ const Error = ({errorCode}) => {
   return (
     <>
       <Header />
-    <main className="error_wrapper">
-      <div className='error_code'>{errorCode}</div>
-      <div className='error_message'>{ errorMessage }</div>
-      <NavLink to='/' className="error_navlink">{homeMessage} </NavLink>
-    </main>
+      <main className="error_wrapper">
+        <div className='error_code'>{errorCode}</div>
+        <div className='error_message'>{ errorMessage }</div>
+        <NavLink to='/' className="error_navlink">{homeMessage} </NavLink>
+      </main>
       <Footer />
     </> 
   )

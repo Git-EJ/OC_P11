@@ -10,6 +10,6 @@ const Tags = ({ tags }) => (
   </div>
 )
 
-Tags.propTypes = { tags: PropTypes.array }
+Tags.propTypes = { tags: PropTypes.array.isRequired }
 
 export default Tags

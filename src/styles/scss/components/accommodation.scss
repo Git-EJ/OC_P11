@@ -21,6 +21,15 @@
       object-position: 50% 50%;
     }
 
+    &_counter {
+      position: absolute;
+      color: $primary-textColor;
+      font-size: 1.1em;
+      font-weight: 500;
+      bottom: 20px;
+      left: 50%;
+    }
+
     &_chevron_right {
       @include banner_img_chevron;
       position: absolute;

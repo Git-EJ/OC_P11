@@ -25,7 +25,7 @@ const Dropdown = ({title, children, className}) => {
         setAnimClass('')
         setTimeout(() => {
           setIsOpen(false)
-        }, 500)
+        }, 1000)
       }
     }
     setAnimating(false)
@@ -33,7 +33,6 @@ const Dropdown = ({title, children, className}) => {
 
   return (
     <div className={classNames.join(' ')}>
-      {/* TODO : cursor pointer sur le container */}
       <div className="dropdown_container" onClick={() => click()}>
         <h4 className="dropdown_title">{title}</h4>
         <div className="dropdown_button">

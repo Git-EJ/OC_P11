@@ -1,9 +1,13 @@
 
 .dropdown {
-
+  
   &_wrapper {
     @include flex_center_column;
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &_container {
@@ -35,10 +39,6 @@
 
     path {
       fill: $primary-textColor;
-    }
-
-    &:hover {
-      cursor: pointer;
     }
   }
 
@@ -73,20 +73,24 @@
       transform: translateY(-5px)  scale(1,1);
       z-index: 1;
       width:100%;
+
       &.dropdown_open {
         transform: translateY(-50%)  scale(1,0);
-        animation: anim-height 0.25s linear forwards;
+        animation: anim-height 0.5s linear forwards;
+
         & .dropdown_contents_text {
           opacity: 0;
-          animation: 0.25s anim-opacity 0.25s linear forwards;
+          animation: 0.5s anim-opacity 0.5s linear forwards;
         }
       }
+
       &:not(.dropdown_open) {
         transform: translateY(-5px)  scale(1,1);
-        animation: 0.25s anim-height-1 0.25s linear forwards;
+        animation: 0.5s anim-height-1 0.5s linear forwards;
+
         & .dropdown_contents_text {
           opacity: 1;
-          animation: anim-opacity-1 0.25s linear forwards;
+          animation: anim-opacity-1 0.5s linear forwards;
         }
       }
     }

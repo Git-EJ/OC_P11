@@ -1,19 +1,13 @@
-import loadingSpinnerIcon from '../assets/icons/loading_spinner_icon_svg.svg';
+// import loadingSpinnerIcon from '../assets/icons/loading_spinner_icon_svg.svg';
 import PropTypes from 'prop-types';
+import LoadingSpinner from '../atoms/LoadingSpinner';
 
 const DataLoadingError = ({data, isLoading, error}) => {
 
-  if (isLoading) { 
-    return (
-      <div className='loading_spinner_container'>
-        <div className='loading_spinner_circle'></div>
-        <img src= {loadingSpinnerIcon} alt="loading" className="loading_spinner_icon" />
-        <p className='loading_spinner_text'>Chargement en cours...</p>
-      </div>
-    )
-  }
+  if (isLoading) return < LoadingSpinner />;
+     
 
-  if (error) return <div>Error : Error Fetching data</div>
+  if (error) return <div>Error : Error Fetching data</div>;
 
   if (!data) {
     return <div>No Data</div>

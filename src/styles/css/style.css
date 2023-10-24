@@ -222,12 +222,14 @@ main {
   animation: spin 1.2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .loading_spinner_icon {
-  width: 65px;
-  height: 65px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -90%);
+}
+.loading_spinner_icon svg {
+  width: 65px;
+  height: 65px;
 }
 .loading_spinner_text {
   font-size: 1.5em;
@@ -678,6 +680,25 @@ main {
     flex-direction: column;
     gap: 1.3rem;
   }
+}
+.accommodation_house_icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+}
+.accommodation_house_icon_img svg {
+  height: clamp(50px, 20vw, 180px);
+  width: auto;
+}
+.accommodation_house_icon_text {
+  margin-top: 1rem;
+  color: #ff6060;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 500;
 }
 
 .about_wrapper {

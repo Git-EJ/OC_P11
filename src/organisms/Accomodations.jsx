@@ -29,7 +29,7 @@ const Accommodations = () => {
     //return a// no sort()
   }
 
-  return (
+  return ( 
     <>
       <main className="accommodation_global_wrapper">
         <Lightbox pictures={accommodationElement.pictures} title={accommodationElement.title} />

@@ -1,13 +1,23 @@
 import PropTypes from 'prop-types';
 import ChevronRight from '../atoms/ChevronRight';
 import ChevronLeft from '../atoms/ChevronLeft';
+import HouseIcon from '../atoms/HouseIcon';
 import { useState } from 'react';
 
 const Lightbox = ({pictures, title}) => {
 
   const [currentPicture, setCurrentPicture] = useState(0)
+  const clickLeft = () => currentPicture === 0 ? setCurrentPicture(pictures.length - 1) : setCurrentPicture(currentPicture - 1) 
+  const clickRight = () => currentPicture === pictures.length - 1 ? setCurrentPicture(0) : setCurrentPicture(currentPicture + 1)
 
-  if (pictures.length === 0) return null
+  if (pictures.length === 0) {
+    return (
+      <div className='accommodation_house_icon_container'>
+        <div className='accommodation_house_icon_img'><HouseIcon /></div>
+        <div className='accommodation_house_icon_text'>Pas d&apos;images de disponibles</div>
+      </div>
+    )
+  }
 
   if (pictures.length === 1) {
     return (
@@ -17,9 +27,6 @@ const Lightbox = ({pictures, title}) => {
       </div>
     )
   } 
-
-  const clickLeft = () => currentPicture === 0 ? setCurrentPicture(pictures.length - 1) : setCurrentPicture(currentPicture - 1) 
-  const clickRight = () => currentPicture === pictures.length - 1 ? setCurrentPicture(0) : setCurrentPicture(currentPicture + 1)
 
   return (
     <div className="lightbox_container">

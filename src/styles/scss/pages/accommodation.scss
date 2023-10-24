@@ -57,7 +57,7 @@
       font-size: clamp(1rem, 1vw, 1.1rem);
       font-weight: 500;
       margin: 0 0.5rem 0 0;
-      color: $primary-color; // TODO HANDLERESIZE
+      color: $primary-color;
 
       &::first-letter {
         text-transform: uppercase;
@@ -123,7 +123,33 @@
       gap:1.3rem;
     }
   }
+
+  &_house_icon {
+
+    &_container {
+      @include flex_center_column;
+      width: 100%;
+      height: auto;
+      margin-bottom: 3rem;
+    }
+
+    &_img {
+      svg {
+        height: clamp(50px, 20vw, 180px);
+        width: auto;
+      }
+    }
+
+    &_text {
+      margin-top: 1rem;
+      color: $primary-color;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      font-weight: 500;
+    }
+  }
 }
+
+
 
 
 

@@ -5,7 +5,6 @@ const starColor = ['#e3e3e3', '#ff6060']
 
 const Rating = ({ rating, max }) => {
 
-  //React transforme le tableau en élément DOM (chaque element du tableau est un composant REACT)
   const stars = new Array(max).fill(0).map((_, i) => i);
   
   return (

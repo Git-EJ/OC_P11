@@ -4,17 +4,17 @@
     @include flex_center_row;
     justify-content: flex-end;
     width: fit-content;
-
-    // TODO CHECK IF NEED IT
-    // @media  screen and (max-width: 700px) {
-    // margin-top: 1rem;
-    // }
   }
 
   &_star {
     svg {
       width: 25px;
       height: 25px;
+
+      @media screen and (max-width: 500px) {
+        width: 20px;
+        height: 20px;
+      }
     }
     
     &:not(:last-child) {

@@ -21,10 +21,14 @@
     border-radius: 8px;
     padding: 0.7em 1em;
     z-index: 2;
+
+    @media screen and (max-width: 700px) {
+      padding: 0.5em 1em;
+    }
   }
 
   &_title {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     font-weight: 500;
     color: $primary-textColor;
   }
@@ -35,6 +39,11 @@
     svg {
       width: 32px;
       height: 32px;
+
+      @media screen and (max-width: 500px)  {
+        width: 25px;
+        height: 25px;
+      }
     }
 
     path {

@@ -4,6 +4,8 @@
     @include flex_center_row;
     justify-content: flex-start;
     width: fit-content;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
   }
 
   &_tag {
@@ -12,14 +14,14 @@
       background: $primary-color;
       margin-right:1em;
       border-radius: 8px;
+      margin-top: 0.6rem;
       padding: 0.3em 1em;
     }
 
     &_text {
       @include flex_center_column;
-      font-size: 0.8rem;
+      font-size: clamp(0.7rem, 0.8vw, 0.8rem);
       color: $primary-textColor;
     }
-    
   }
 }

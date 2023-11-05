@@ -287,9 +287,11 @@ main {
 }
 .card_title {
   position: absolute;
-  top: 83%;
-  left: 5%;
-  right: 5%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.2666666667);
   color: #ffffff;
   font-size: clamp(1em, 1.2vw, 1.2em);
   font-weight: 500;

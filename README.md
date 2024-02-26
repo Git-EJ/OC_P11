@@ -7,7 +7,7 @@
 </div>
 
 
-<h2>Kasa: Apartmens booking app</h2>
+<h2>Kasa: Apartments booking app</h2>
 
 
 ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
@@ -16,6 +16,13 @@
 ![Responsive](https://img.shields.io/badge/Responsive-08BFF1)
 ![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
+
+
+<strong>Project:</strong> From scratch. 
+
+<strong>Project goal:</strong> Create a web application with React and React Router.
+
 
 
 <strong>Install dependencies:</strong>

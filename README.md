@@ -40,12 +40,3 @@ npm run build
 npm run preview
 ```
 <br>
-
-<strong>Link to npm DataTable component:</strong><br>
-https://www.npmjs.com/package/oc_react_datatable?activeTab=readme
-<br><br>
-
-<strong>MUI:</strong>
- - form select
- - form datePicker
- - form modal

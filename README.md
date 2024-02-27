@@ -41,7 +41,7 @@ npm run dev
 
 ```
 npm run sass
-``
+```
 
 <strong>build:</strong>
 ```

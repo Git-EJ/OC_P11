@@ -37,12 +37,18 @@ npm i
 npm run dev
 ```
 
+<strong>run sass</strong>
+
+```
+npm run sass
+``
+
 <strong>build:</strong>
 ```
 npm run build
 ```
 
-<strong>run build preview:</strong>
+<strong>run build preview:</strong>a
 ```
 npm run preview
 ```

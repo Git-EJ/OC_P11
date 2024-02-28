@@ -53,3 +53,11 @@ npm run build
 npm run preview
 ```
 <br>
+
+<strong>Screenshot:</strong>
+
+<div align='center'>
+
+ <img src="./src/assets/screenshot/screenshot_kasa-homepge.png" alt="Kasa Homepage screenshot" title="Kasa Homepage screenshot" width="auto" height="auto"/>
+ 
+</div>
